@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça Login</h1>
+            <p>E junte-se ao nosso time</p>
+            <img src="imgs/astronaut-animate.svg" class="left-login-image" alt="Astronauta animado">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h2>Bem-vindo de Volta</h2>
+                <form id="loginForm">
+                    <div class="textField">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
+                        <span class="error-message" id="userError">Por favor, insira seu usuário.</span>
+                    </div>
+                    <div class="textField">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <span class="error-message" id="passError">Por favor, insira sua senha.</span>
+                        <label class="show-password-label">
+                            <input type="checkbox" id="showPassword"> Mostrar Senha
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #2f2841;
+    --background-color: #201b2c;
+    --input-background: #514869;
+    --error-color: #ff6b6b;
+    --text-color: #f0ffffde;
+    --hover-color: #00e676;
+    --button-text-color: #2b134b;
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--background-color), #362850);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Evita barras de rolagem que podem causar travamentos */
+}
+
+.main-login {
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(31, 38, 135, 0.37); /* Reduzi a intensidade do box-shadow */
+    /* Removi o backdrop-filter para melhorar a performance */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 80vw;
+    max-width: 1000px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.main-login:hover {
+    transform: scale(1.01); /* Reduzi a escala para minimizar a carga */
+}
+
+.left-login {
+    flex: 1;
+    padding: 30px 40px; /* Reduzi o padding-top de 60px para 30px */
+    background: linear-gradient(135deg, #362850, var(--secondary-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhei os itens para o início */
+    align-items: flex-start;
+    text-align: left;
+    transition: transform var(--transition-speed) ease;
+}
+
+.left-login:hover {
+    transform: scale(1.02); /* Reduzi a escala para minimizar a carga */
+}
+
+.left-login h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 5px; /* Reduzi a margem de 10px para 5px */
+    animation: fadeInDown 0.8s ease-out; /* Reduzi a duração da animação */
+}
+
+.left-login p {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 15px; /* Reduzi a margem de 20px para 15px */
+    animation: fadeInUp 0.8s ease-out; /* Reduzi a duração da animação */
+}
+
+.left-login-image {
+    width: 100%; /* Ajustei para 100% para melhor responsividade */
+    max-width: 400px; /* Aumentei o tamanho máximo de 300px para 400px */
+    height: auto;
+    animation: bounceIn 0.8s ease-out; /* Reduzi a duração da animação */
+}
+
+.right-login {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    background: var(--secondary-color);
+    padding: 30px 25px; /* Reduzi o padding */
+    border-radius: 12px; /* Reduzi o raio para melhor performance */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.37); /* Reduzi a intensidade do box-shadow */
+    /* Removi o backdrop-filter para melhorar a performance */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeInUp 0.8s ease-out; /* Reduzi a duração da animação */
+}
+
+.card-login h2 {
+    margin-bottom: 25px; /* Reduzi a margem */
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.textField {
+    position: relative;
+    margin-bottom: 15px; /* Reduzi a margem */
+}
+
+.textField label {
+    display: block;
+    margin-bottom: 6px; /* Reduzi a margem */
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.textField input {
+    width: 100%;
+    padding: 10px 12px; /* Reduzi o padding */
+    border: none;
+    border-radius: 6px; /* Reduzi o raio */
+    background: var(--input-background);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: background var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.textField input:focus {
+    background: #665c7a;
+    outline: none;
+    box-shadow: 0 0 3px var(--primary-color); /* Reduzi o box-shadow */
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    display: none;
+    margin-top: 3px; /* Reduzi a margem */
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px; /* Reduzi o padding */
+    border: none;
+    border-radius: 6px; /* Reduzi o raio */
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Reduzi o espaçamento */
+    cursor: pointer;
+    transition: background var(--transition-speed) ease, transform 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduzi a intensidade do box-shadow */
+    font-size: 1rem;
+}
+
+.btn-login:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px); /* Reduzi a translação */
+}
+
+.btn-login:active {
+    transform: translateY(0px); /* Ajustei para evitar movimentos excessivos */
+}
+
+.show-password-label {
+    display: flex;
+    align-items: center;
+    margin-top: 8px; /* Reduzi a margem */
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.show-password-label input {
+    margin-right: 8px; /* Reduzi a margem */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .main-login {
+        flex-direction: column;
+        max-width: 90vw;
+    }
+
+    .left-login,
+    .right-login {
+        width: 100%;
+    }
+
+    .left-login h1 {
+        font-size: 1.8rem;
+    }
+
+    .left-login p {
+        font-size: 0.95rem;
+    }
+
+    .left-login-image {
+        max-width: 350px; /* Aumentei de 250px para 350px para refletir o aumento geral */
+    }
+}
+
+@media (max-width: 600px) {
+    .left-login {
+        display: none;
+    }
+
+    .card-login {
+        padding: 25px 15px; /* Reduzi o padding */
+    }
+}
+
+/* Animações Otimizadas */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Reduzi o deslocamento */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8); /* Reduzi a escala inicial */
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Reduzi o deslocamento */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
