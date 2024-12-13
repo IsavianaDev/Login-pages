@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body.login-page {
+    background-color: #000000df;
+
+}
+
+
+body.register-page {
+    background-color: #000000df;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(255, 208, 0, 0.171);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+
+label {
+    display: block;
+    font-size: 0.9em;
+    color: #000000;
+    opacity: 0.9;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container svg {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #d0820d;
+    border-radius: 8px;
+    font-size: 0.9em;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #d0820db8;
+    box-shadow: 0 0 5px #d0820db8;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d0820d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff9900;
+}
+
+.back-btn {
+    background-color: #ccc;
+    color: #333;
+    margin-top: 10px;
+}
+
+.back-btn:hover {
+    background-color: #bbb;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #777;
+}
+
+.register-link a {
+    color: #ce9033;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.register-link br {
+    display: block;
+    margin-top: 5px;
+}
+
+input::placeholder {
+    opacity: 0.8;
+    text-align: left;
+    color: #888;
+}
+
+
+form input:not([type="text"]):not([type="password"]):not(.input-container input) {
+    padding: 10px;
+}
+
+
+form input {
+    margin: auto;
+}
+
+
+.register-page input {
+    padding: 10px;
+    padding-left: 10px;
+}

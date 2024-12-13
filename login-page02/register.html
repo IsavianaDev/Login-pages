@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <body class="register-page">
+
+        <div class="container">
+            <div class="login-card">
+                <h1>Cadastrar</h1>
+                <p>Preencha os campos abaixo para criar sua conta</p>
+                <form>
+                    <div class="form-group">
+                        <label for="first-name">Nome</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Sobrenome</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <input type="password" id="confirm-password" name="confirm-password"
+                            placeholder="Confirme sua senha" required>
+                    </div>
+                    <button type="submit" class="btn">Cadastrar</button>
+                </form>
+                <button onclick="window.location.href='index.html'" class="btn back-btn">Voltar para o Login</button>
+            </div>
+        </div>
+    </body>
+
+</html>
